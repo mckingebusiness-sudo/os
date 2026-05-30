@@ -8,13 +8,13 @@ const links = [
 
 export function SiteHeader() {
 	return (
-		<header style= display: "flex", alignItems: "center", justifyContent: "space-between", padding: "1.1rem 1.5rem", borderBottom: "1px solid #1f1f23" >
-			<Link href="/" style= fontWeight: 700, fontSize: "1.2rem" >
+		<header className="mx-auto flex max-w-5xl items-center justify-between px-6 py-5">
+			<Link href="/" className="text-xl font-bold">
 				LifeOS
 			</Link>
-			<nav style= display: "flex", gap: "1.5rem" >
+			<nav className="flex gap-6 text-[var(--color-muted)]">
 				{links.map((l) => (
-					<Link key={l.href} href={l.href} style= color: "var(--color-muted)" >
+					<Link key={l.href} href={l.href}>
 						{l.label}
 					</Link>
 				))}

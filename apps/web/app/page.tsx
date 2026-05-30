@@ -11,33 +11,33 @@ const features = [
 
 export default function HomePage() {
 	return (
-		<main>
-			<section style= padding: "6rem 1.5rem", textAlign: "center" >
-				<p style= color: "var(--color-accent)", fontWeight: 600 >
+		<main className="mx-auto max-w-5xl px-6">
+			<section className="py-24 text-center">
+				<p className="mb-4 text-[var(--color-muted)]">
 					خصوصية أولًا · مجاني للأبد · يعمل دون اتصال
 				</p>
-				<h1 style= fontSize: "3rem", margin: "1rem 0", maxWidth: 760, marginInline: "auto" >
+				<h1 className="mb-6 text-4xl font-bold md:text-5xl">
 					LifeOS — نظام تشغيل حياتك الكامل
 				</h1>
-				<p style= color: "var(--color-muted)", maxWidth: 620, marginInline: "auto", fontSize: "1.15rem" >
+				<p className="mx-auto mb-8 max-w-2xl text-[var(--color-muted)]">
 					ملاحظات، مهام، أهداف، عادات، تركيز، ومعرفة — كلها في مكان واحد، تحت سيطرتك الكاملة.
 				</p>
-				<div style= marginTop: "2rem", display: "flex", gap: "1rem", justifyContent: "center" >
-					<Link href="/app" style= background: "var(--color-accent)", color: "#fff", padding: "0.85rem 1.6rem", borderRadius: 10, fontWeight: 600 >
+				<div className="flex justify-center gap-4">
+					<Link href="/app" className="rounded-lg bg-accent px-6 py-3 font-semibold">
 						ابدأ الآن
 					</Link>
-					<Link href="/features" style= border: "1px solid #2a2a2e", padding: "0.85rem 1.6rem", borderRadius: 10 >
+					<Link href="/features" className="rounded-lg border border-surface px-6 py-3">
 						المميزات
 					</Link>
 				</div>
 			</section>
-			<section style= padding: "2rem 1.5rem 6rem", maxWidth: 1080, marginInline: "auto" >
-				<div style= display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "1.25rem" >
+			<section className="py-12">
+				<div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
 					{features.map((f) => (
-						<div key={f.title} style= background: "var(--color-surface)", padding: "1.5rem", borderRadius: 14, border: "1px solid #1f1f23" >
-							<div style= fontSize: "1.8rem" >{f.icon}</div>
-							<h3 style= margin: "0.6rem 0 0.3rem" >{f.title}</h3>
-							<p style= color: "var(--color-muted)", margin: 0 >{f.desc}</p>
+						<div key={f.title} className="rounded-xl bg-surface p-6">
+							<div className="mb-3 text-3xl">{f.icon}</div>
+							<h3 className="mb-2 text-lg font-semibold">{f.title}</h3>
+							<p className="text-[var(--color-muted)]">{f.desc}</p>
 						</div>
 					))}
 				</div>

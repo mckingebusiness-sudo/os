@@ -2,9 +2,9 @@ import Link from "next/link"
 
 export function SiteFooter() {
 	return (
-		<footer style= borderTop: "1px solid #1f1f23", padding: "2rem 1.5rem", color: "var(--color-muted)", display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: "1rem" >
+		<footer className="mx-auto mt-16 flex max-w-5xl flex-col items-center justify-between gap-4 border-t border-surface px-6 py-10 text-[var(--color-muted)] sm:flex-row">
 			<span>© 2026 LifeOS — مجاني للأبد · AGPL-3.0</span>
-			<span style= display: "flex", gap: "1rem" >
+			<span className="flex gap-4">
 				<Link href="/legal/privacy">الخصوصية</Link>
 				<Link href="/legal/terms">الشروط</Link>
 			</span>

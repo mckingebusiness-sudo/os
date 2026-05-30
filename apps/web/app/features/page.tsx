@@ -9,13 +9,13 @@ const groups = [
 
 export default function FeaturesPage() {
 	return (
-		<main style= maxWidth: 980, margin: "0 auto", padding: "4rem 1.5rem" >
-			<h1>كل المميزات</h1>
-			<div style= display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "1.5rem", marginTop: "2rem" >
+		<main className="mx-auto max-w-5xl px-6 py-16">
+			<h1 className="mb-8 text-3xl font-bold">كل المميزات</h1>
+			<div className="grid gap-6 sm:grid-cols-2">
 				{groups.map((g) => (
-					<div key={g.title} style= background: "var(--color-surface)", padding: "1.5rem", borderRadius: 14, border: "1px solid #1f1f23" >
-						<h3 style= marginTop: 0 >{g.title}</h3>
-						<ul style= color: "var(--color-muted)", paddingInlineStart: "1.2rem", margin: 0 >
+					<div key={g.title} className="rounded-xl bg-surface p-6">
+						<h3 className="mb-3 text-lg font-semibold text-accent">{g.title}</h3>
+						<ul className="list-disc space-y-1 pe-6 text-[var(--color-muted)]">
 							{g.items.map((it) => (
 								<li key={it}>{it}</li>
 							))}
